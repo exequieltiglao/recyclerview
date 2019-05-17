@@ -22,12 +22,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity";
+    public static final String BASE_URL = "https://jsonplaceholder.typicode.com/";
+
     private RecyclerView mRecyclerView;
     private PostAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
-    private static final String TAG = "MainActivity";
-    public static final String BASE_URL = "https://jsonplaceholder.typicode.com/";
     private ArrayList<Post> mPostArrayList = new ArrayList<>();
 
     ApiInterface apiInterface;

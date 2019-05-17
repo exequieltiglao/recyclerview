@@ -3,6 +3,7 @@ package com.exequieltiglao.cif_retrofit.adapter;
 import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,11 +21,13 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ExampleViewHol
     private ArrayList<Post> postArrayList;
 
     public PostAdapter(ArrayList<Post> mPostArrayList) {
+
         if (mPostArrayList == null) {
             this.postArrayList = new ArrayList<>();
-
+            Log.d(TAG, "PostAdapter: .... not null");
         } else {
             this.postArrayList = mPostArrayList;
+            Log.d(TAG, "PostAdapter: .... null");
         }
 
     }
@@ -66,10 +69,14 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ExampleViewHol
         holder.post_title.setText("Title: " + currentItem.getTitle());
         holder.body.setText("Body: " + currentItem.getBody());
 
+        Log.d(TAG, "onBindViewHolder: view holder check ");
+
     }
 
     @Override
     public int getItemCount() {
+
+        Log.d(TAG, "getItemCount: " + postArrayList.size());
         return postArrayList.size();
     }
 }
