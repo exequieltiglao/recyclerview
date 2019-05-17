@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         result = findViewById(R.id.results);
 
         mRecyclerView = findViewById(R.id.recyclerview);
-        mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        mLayoutManager = new LinearLayoutManager(this);
         mAdapter = new PostAdapter(mPostArrayList);
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
                 ArrayList<Post> posts = new ArrayList<>();
                 posts.addAll(response.body());
-                mAdapter.setmPostArrayList(posts);
+                mAdapter.setPostArrayList(posts);
                 mRecyclerView.setLayoutManager(mLayoutManager);
                 mRecyclerView.setAdapter(mAdapter);
 

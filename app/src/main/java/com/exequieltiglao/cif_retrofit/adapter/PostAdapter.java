@@ -32,8 +32,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ExampleViewHol
 
     }
 
-    public void setmPostArrayList(ArrayList<Post> mPostArrayList) {
-        this.postArrayList = mPostArrayList;
+    public void setPostArrayList(ArrayList<Post> postArrayList) {
+        this.postArrayList = postArrayList;
     }
 
     static class ExampleViewHolder extends RecyclerView.ViewHolder {
@@ -60,9 +60,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ExampleViewHol
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull ExampleViewHolder holder, int i) {
+    public void onBindViewHolder(@NonNull ExampleViewHolder holder, int position) {
 
-        Post currentItem = postArrayList.get(i);
+        Post currentItem = postArrayList.get(position);
 
         holder.userId.setText("User ID: " + currentItem.getUserId().toString());
         holder.id.setText("ID: " + currentItem.getId().toString());
