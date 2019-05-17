@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.exequieltiglao.cif_retrofit.adapter.ExampleAdapter;
+import com.exequieltiglao.cif_retrofit.adapter.PostAdapter;
 import com.exequieltiglao.cif_retrofit.api.ApiInterface;
 import com.exequieltiglao.cif_retrofit.model.Post;
 
@@ -23,7 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-    private ExampleAdapter mAdapter;
+    private PostAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
     private static final String TAG = "MainActivity";
@@ -42,21 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         mRecyclerView = findViewById(R.id.recyclerview);
         mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        mAdapter = new ExampleAdapter(mPostArrayList);
-
-//        ArrayList<ExampleItem> exampleList = new ArrayList<>();
-//        exampleList.add(new ExampleItem(R.drawable.ic_android, "Text 1", "Text 2"));
-//        exampleList.add(new ExampleItem(R.drawable.ic_android_black, "Text 1", "Text 2"));
-//        exampleList.add(new ExampleItem(R.drawable.ic_android_white, "Text 1    ", "Text 2"));
-
-        /*
-        mRecyclerView = findViewById(R.id.recyclerview);
-        mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(this);
-        mAdapter = new ExampleAdapter(exampleList);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter(mAdapter);
-         */
+        mAdapter = new PostAdapter(mPostArrayList);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)

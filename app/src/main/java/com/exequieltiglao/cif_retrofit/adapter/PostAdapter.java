@@ -3,26 +3,23 @@ package com.exequieltiglao.cif_retrofit.adapter;
 import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.exequieltiglao.cif_retrofit.R;
-import com.exequieltiglao.cif_retrofit.model.ExampleItem;
 import com.exequieltiglao.cif_retrofit.model.Post;
 
 import java.util.ArrayList;
 
-public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleViewHolder> {
+public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ExampleViewHolder> {
 
-    private static final String TAG = "ExampleAdapter";
+    private static final String TAG = "PostAdapter";
 
     private ArrayList<Post> postArrayList;
 
-    public ExampleAdapter(ArrayList<Post> mPostArrayList) {
+    public PostAdapter(ArrayList<Post> mPostArrayList) {
         if (mPostArrayList == null) {
             this.postArrayList = new ArrayList<>();
 
