@@ -6,6 +6,9 @@
     android:layout_marginBottom="5dp"
     app:cardCornerRadius="4dp">
 
+    <!--just an example layout-->
+    <!--just an example layout-->
+    <!--just an example layout-->
 
     <RelativeLayout
         android:layout_width="match_parent"

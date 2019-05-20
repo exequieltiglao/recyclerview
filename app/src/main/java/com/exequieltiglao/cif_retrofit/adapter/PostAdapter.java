@@ -24,7 +24,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ExampleViewHol
 
         if (mPostArrayList == null) {
             this.postArrayList = new ArrayList<>();
-            Log.d(TAG, "PostAdapter: .... not null");
+            Log.d(TAG, "PostAdapter: .... make not null");
         } else {
             this.postArrayList = mPostArrayList;
             Log.d(TAG, "PostAdapter: .... null");
@@ -56,6 +56,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ExampleViewHol
     public ExampleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.post_list, parent, false);
         return new ExampleViewHolder(view);
+
     }
 
     @SuppressLint("SetTextI18n")

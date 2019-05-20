@@ -13,6 +13,13 @@ public class Post {
     @SerializedName("body")
     private String body;
 
+    public Post(Integer userId, Integer id, String title, String body) {
+        this.userId = userId;
+        this.id = id;
+        this.title = title;
+        this.body = body;
+    }
+
     public Integer getUserId() {
         return userId;
     }
@@ -44,4 +51,6 @@ public class Post {
     public void setBody(String body) {
         this.body = body;
     }
+
+
 }
